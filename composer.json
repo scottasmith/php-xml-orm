@@ -1,0 +1,22 @@
+{
+    "name": "ssmiff/xml-orm",
+    "description": "XML ORM entities with PHP Attributes",
+    "type": "library",
+    "require": {
+        "ext-simplexml": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ssmiff\\XmlOrm\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Scott Smith",
+            "email": "smitherz82@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^10.0"
+    }
+}
