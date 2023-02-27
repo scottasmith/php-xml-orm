@@ -1,22 +1,29 @@
 {
-    "name": "ssmiff/xml-orm",
-    "description": "XML ORM entities with PHP Attributes",
-    "type": "library",
-    "require": {
-        "ext-simplexml": "*"
-    },
-    "autoload": {
-        "psr-4": {
-            "Ssmiff\\XmlOrm\\": "src/"
-        }
-    },
-    "authors": [
-        {
-            "name": "Scott Smith",
-            "email": "smitherz82@gmail.com"
-        }
-    ],
-    "require-dev": {
-        "phpunit/phpunit": "^10.0"
+  "name": "ssmiff/xml-orm",
+  "description": "XML ORM entities with PHP Attributes",
+  "type": "library",
+  "require": {
+    "php": "^8.2",
+    "ext-simplexml": "*",
+    "ext-dom": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Ssmiff\\XmlOrm\\": "src/"
     }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Ssmiff\\XmlOrmTest\\": "tests/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Scott Smith",
+      "email": "smitherz82@gmail.com"
+    }
+  ],
+  "require-dev": {
+    "phpunit/phpunit": "^10.0"
+  }
 }
