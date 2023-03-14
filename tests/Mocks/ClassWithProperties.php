@@ -40,7 +40,6 @@ class ClassWithProperties
     public function __construct(
         #[Attributes\Element()]
         public string $prop2,
-
         #[Attributes\Element()]
         public TestEnum $prop11
     ) {
