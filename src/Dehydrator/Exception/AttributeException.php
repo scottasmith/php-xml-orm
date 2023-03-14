@@ -11,7 +11,7 @@ final class AttributeException extends Exception
     public static function nonUnique(array $attributes): self
     {
         $attributeNames = array_map(
-            fn($attribute) => array_slice(explode('\\', get_class($attribute)), -1)[0],
+            fn ($attribute) => array_slice(explode('\\', get_class($attribute)), -1)[0],
             $attributes
         );
 

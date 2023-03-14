@@ -11,8 +11,7 @@ class ClassWithMethods
     public function __construct(
         #[Attributes\Element()]
         public string $prop1
-    )
-    {
+    ) {
     }
 
     #[Attributes\ElementNS('http://example.com', 'tag1')]

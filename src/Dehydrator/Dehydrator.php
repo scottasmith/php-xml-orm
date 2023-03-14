@@ -174,19 +174,19 @@ final readonly class Dehydrator implements DehydratorInterface
     ): ReflectionAttribute|UniqueAttributeInterface {
         $instances = array_filter(
             array_map(
-                fn(ReflectionAttribute $attribute) => $attribute->newInstance(),
+                fn (ReflectionAttribute $attribute) => $attribute->newInstance(),
                 $attributes
             ),
-            fn($attribute) => match (true) {
+            fn ($attribute) => match (true) {
                 $attribute instanceof A\AttributeElement,
-                    $attribute instanceof A\AttributeElementNs,
-                    $attribute instanceof A\Element,
-                    $attribute instanceof A\ElementNS,
-                    $attribute instanceof A\TextNode,
-                    $attribute instanceof A\CDATASection,
-                    $attribute instanceof A\EntityReference,
-                    $attribute instanceof A\DocumentFragment,
-                    $attribute instanceof A\Comment => true,
+                $attribute instanceof A\AttributeElementNs,
+                $attribute instanceof A\Element,
+                $attribute instanceof A\ElementNS,
+                $attribute instanceof A\TextNode,
+                $attribute instanceof A\CDATASection,
+                $attribute instanceof A\EntityReference,
+                $attribute instanceof A\DocumentFragment,
+                $attribute instanceof A\Comment => true,
                 default => false
             }
         );
@@ -304,7 +304,7 @@ final readonly class Dehydrator implements DehydratorInterface
     {
         $instances = [
             // Default formatter
-            new class implements FormatterInterface {
+            new class () implements FormatterInterface {
                 public function format(mixed $value): string
                 {
                     if ($value instanceof BackedEnum) {

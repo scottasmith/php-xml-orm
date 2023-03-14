@@ -83,42 +83,42 @@ class DehydrateTest extends TestCase
                 new Mocks\ClassWithProperties('test123', Mocks\TestEnum::VAL2),
                 "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" .
                 '<ClassWithProperties>' .
-                '<prop1>test</prop1>'.
-                '<prop3>val1</prop3>'.
-                '<tag1>123</tag1>'.
-                '<![CDATA[tag2]]>'.
-                'start&copy;end'.
-                '<copy/>'.
-                '<!--comment-->'.
-                '<!--comment2-->'.
-                '<prop2>test123</prop2>'.
-                '<prop11>VAL2</prop11>'.
+                '<prop1>test</prop1>' .
+                '<prop3>val1</prop3>' .
+                '<tag1>123</tag1>' .
+                '<![CDATA[tag2]]>' .
+                'start&copy;end' .
+                '<copy/>' .
+                '<!--comment-->' .
+                '<!--comment2-->' .
+                '<prop2>test123</prop2>' .
+                '<prop11>VAL2</prop11>' .
                 '</ClassWithProperties>'
             ],
             'class-with-methods' => [
                 new Mocks\ClassWithMethods('test123'),
                 "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" .
-                '<ClassWithMethods>'.
-                '<prop1>test123</prop1>'.
-                '<tag1 xmlns="http://example.com">abc</tag1>'.
-                'start&copy;end'.
-                '<tag2:e xmlns:tag2="http://example.com">abc</tag2:e>'.
+                '<ClassWithMethods>' .
+                '<prop1>test123</prop1>' .
+                '<tag1 xmlns="http://example.com">abc</tag1>' .
+                'start&copy;end' .
+                '<tag2:e xmlns:tag2="http://example.com">abc</tag2:e>' .
                 '</ClassWithMethods>'
             ],
             'methods-returning-classes' => [
                 new Mocks\MethodsReturningClasses(),
                 "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" .
-                '<e:test1'.
-                ' xmlns:e="http://example.com"'.
-                ' xmlns:e1="http://example2.com"'.
-                ' xmlns:e2="http://example3.com"'.
-                ' e1:t="foo"'.
-                ' e2:t="bar">'.
-                "\n".
-                '  <e2:SimpleNsEmptyClass foo="foo"/>'.
-                "\n".
-                '  <e1:foo>test</e1:foo>'.
-                "\n".
+                '<e:test1' .
+                ' xmlns:e="http://example.com"' .
+                ' xmlns:e1="http://example2.com"' .
+                ' xmlns:e2="http://example3.com"' .
+                ' e1:t="foo"' .
+                ' e2:t="bar">' .
+                "\n" .
+                '  <e2:SimpleNsEmptyClass foo="foo"/>' .
+                "\n" .
+                '  <e1:foo>test</e1:foo>' .
+                "\n" .
                 '</e:test1>'
             ],
             'simple-with-formatter' => [
